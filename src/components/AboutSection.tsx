@@ -1,7 +1,7 @@
 const AboutSection = () => {
   return (
     <section
-      className=" flex justify-between w-[98.8vw] h-[100vh] bg-[#09080D]"
+      className="overflow-y-hidden flex justify-between w-[100vw] h-[100vh] bg-[#09080D]"
       id="second"
     >
       <div></div>

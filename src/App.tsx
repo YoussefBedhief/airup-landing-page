@@ -6,7 +6,7 @@ import Navbar from "./components/Navbar"
 
 function App() {
   return (
-    <main className="flex min-h-screen flex-col items-center pb-3 bg-[#121117] text-white">
+    <main className="flex min-h-screen flex-col items-center pb-3 bg-[#121117] text-white scrollbar-hide overflow-y-hidden">
       <Navbar />
       <HeroSection />
       <AboutSection />

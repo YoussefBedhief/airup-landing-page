@@ -3,7 +3,7 @@ import { CursorArrowRippleIcon } from "@heroicons/react/24/solid"
 const DisplaySection = () => {
   return (
     <section
-      className=" flex justify-between w-[98.8vw] h-screen bg-[#09080D]"
+      className="scrollbar-hide flex justify-between w-[100vw] h-screen bg-[#09080D] "
       id="third"
     >
       <div

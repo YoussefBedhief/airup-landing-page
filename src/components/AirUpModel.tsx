@@ -17,7 +17,12 @@ import {
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { useCallback, useEffect, useRef, useState } from "react"
-import { ArrowLeftOnRectangleIcon } from "@heroicons/react/24/outline"
+import {
+  ArrowLeftOnRectangleIcon,
+  Cog8ToothIcon,
+  PauseIcon,
+} from "@heroicons/react/24/outline"
+import { PlayIcon, StopIcon } from "@heroicons/react/24/solid"
 
 const AirUpModel = () => {
   const canvasRef = useRef(null)
@@ -43,6 +48,15 @@ const AirUpModel = () => {
     const exitButton = document.getElementById(
       "button--exit"
     ) as HTMLButtonElement
+    const animateButton = document.getElementById(
+      "button--animate"
+    ) as HTMLButtonElement
+    const pauseButton = document.getElementById(
+      "button--pause"
+    ) as HTMLButtonElement
+    const stopButton = document.getElementById(
+      "button--stop"
+    ) as HTMLButtonElement
     const customizerInterface = document.getElementById(
       "customizer--container"
     ) as HTMLDivElement
@@ -59,7 +73,6 @@ const AirUpModel = () => {
     await viewer.addPlugin(SSAOPlugin)
     // await viewer.addPlugin(DiamondPlugin)
     // await viewer.addPlugin(FrameFadePlugin)
-    await viewer.addPlugin(GLTFAnimationPlugin)
     // await viewer.addPlugin(GroundPlugin)
     await viewer.addPlugin(BloomPlugin)
     // await viewer.addPlugin(TemporalAAPlugin)
@@ -74,6 +87,18 @@ const AirUpModel = () => {
 
     // This must be called once after all plugins are added.
     viewer.renderer.refreshPipeline()
+    await viewer.addPlugin(GLTFAnimationPlugin).then((result) => {
+      animateButton.addEventListener("click", () => {
+        result.loopRepetitions = 1
+        result.playAnimation()
+      })
+      pauseButton.addEventListener("click", () => {
+        result.pauseAnimation()
+      })
+      stopButton.addEventListener("click", () => {
+        result.resetAnimation()
+      })
+    })
 
     // Import and add a GLB file.
     await manager.addFromPath("airup.glb")
@@ -84,9 +109,7 @@ const AirUpModel = () => {
 
     // Load an environment map if not set in the glb file
     // await viewer.setEnvironmentMap((await manager.importer!.importSinglePath<ITexture>("./assets/environment.hdr"))!);
-    {
-      /*@ts-ignore */
-    }
+
     const plug = manager.materials!.findMaterialsByName(
       "Object_1_009"
     )[0] as MeshBasicMaterial2
@@ -261,6 +284,9 @@ const AirUpModel = () => {
 
     function enableControlers() {
       exitButton.style.display = "block"
+      animateButton.style.display = "block"
+      pauseButton.style.display = "block"
+      stopButton.style.display = "block"
       customizerInterface.style.display = "block"
       viewer.scene.activeCamera.setCameraOptions({ controlsEnabled: true })
     }
@@ -290,6 +316,9 @@ const AirUpModel = () => {
       mainContainer.style.pointerEvents = "none"
       document.body.style.cursor = "default"
       exitButton.style.display = "none"
+      animateButton.style.display = "none"
+      pauseButton.style.display = "none"
+      stopButton.style.display = "none"
       customizerInterface.style.display = "none"
       // lenis.start()
     })
@@ -375,13 +404,14 @@ const AirUpModel = () => {
     <>
       <div
         id="webgi-canvas-container"
-        className="h-screen w-full fixed flex justify-end items-center flex-col"
+        className="w-screen h-screen scrollbar-hide fixed flex justify-end items-center flex-col"
       >
         <canvas
           id="webgi-canvas"
           ref={canvasRef}
-          className="h-screen w-full bg-transparent fixed top-0"
+          className="h-full w-full scrollbar-hide bg-transparent fixed top-0"
         />
+
         <button
           id="button--exit"
           className="border hidden border-white rounded-3xl py-2 px-5 items-center gap-x-2 hover:bg-gradient-to-r from-[#ff7043] to-orange-600 hover:border-transparent z-20 mb-2"
@@ -422,6 +452,26 @@ const AirUpModel = () => {
             className="w-9 h-9 rounded-full p-2 bg-[#713BB9] hover:w-12 hover:h-12 hover:shadow-lg transition-all duration-150"
           ></li>
         </ul>
+        <div className="fixed top-[30%] right-0 mr-2">
+          <button
+            id="button--animate"
+            className="border hidden border-white rounded-full p-2 items-center hover:bg-gradient-to-r from-[#ff7043] to-orange-600 hover:border-transparent z-20 mb-2"
+          >
+            <Cog8ToothIcon className="h-8 w-8" />
+          </button>
+          <button
+            id="button--pause"
+            className="border hidden border-white rounded-full p-2 items-center hover:bg-gradient-to-r from-[#ff7043] to-orange-600 hover:border-transparent z-20 mb-2"
+          >
+            <PauseIcon className="h-8 w-8" />
+          </button>
+          <button
+            id="button--stop"
+            className="border hidden border-white rounded-full p-2 items-center hover:bg-gradient-to-r from-[#ff7043] to-orange-600 hover:border-transparent z-20 mb-2"
+          >
+            <StopIcon className="h-8 w-8" />
+          </button>
+        </div>
       </div>
     </>
   )

@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+:root {
+  ::-webkit-scrollbar {
+    width: 0; /* Vous pouvez ajuster la largeur selon vos préférences */
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: transparent; /* Couleur de fond de la zone de la barre de défilement */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Couleur de la poignée de la barre de défilement */
+  }
+
+  /* Masquer la barre de défilement pour Firefox */
+  /* Notez que Firefox ne prend pas en charge la propriété `width` pour la barre de défilement */
+  /* Vous pouvez ajuster la couleur si nécessaire */
+  scrollbar-width: none;
+  -moz-scrollbar-width: none;
+}

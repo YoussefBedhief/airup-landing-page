@@ -2,7 +2,10 @@ import { RocketLaunchIcon, BanknotesIcon } from "@heroicons/react/24/outline"
 
 const HeroSection = () => {
   return (
-    <section className=" flex justify-between w-full h-screen" id="first">
+    <section
+      className=" flex justify-between w-full h-screen scrollbar-hide"
+      id="first"
+    >
       <div
         className="flex flex-col justify-center pl-56"
         id="section--one--container"
