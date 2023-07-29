@@ -1,9 +1,10 @@
 import { RocketLaunchIcon, BanknotesIcon } from "@heroicons/react/24/outline"
-
+import { BsMouse } from "react-icons/bs"
+import { BiChevronsDown } from "react-icons/bi"
 const HeroSection = () => {
   return (
     <section
-      className=" flex justify-between w-full h-screen scrollbar-hide"
+      className=" flex justify-between w-full h-screen scrollbar-hide scroll-smooth"
       id="first"
     >
       <div
@@ -20,14 +21,24 @@ const HeroSection = () => {
           Hydration Reinvented. Pure water, endless flavors.
         </p>
         <div className="flex gap-x-3 py-4 justify-start ">
-          <button className="z-30 border border-white rounded-3xl py-2 px-5 flex items-center gap-x-2 hover:bg-gradient-to-r from-[#ff7043] to-orange-600 hover:border-transparent">
+          <a
+            href="#second"
+            className="z-30 border cursor-pointer scroll-smooth border-white rounded-3xl py-2 px-5 flex items-center gap-x-2 hover:bg-gradient-to-r from-[#ff7043] to-orange-600 hover:border-transparent"
+          >
             <RocketLaunchIcon className="h-5 w-5" />
             Explore
-          </button>
-          <button className=" z-30 border border-white rounded-3xl py-2 px-5 flex items-center gap-x-2 hover:hover:bg-gradient-to-r from-[#ff7043] to-orange-600 hover:border-transparent">
+          </a>
+          <a
+            href="#"
+            className=" z-50 border cursor-pointer border-white rounded-3xl py-2 px-5 flex items-center gap-x-2 hover:hover:bg-gradient-to-r from-[#ff7043] to-orange-600 hover:border-transparent"
+          >
             <BanknotesIcon className="h-5 w-5" />
             Buy
-          </button>
+          </a>
+        </div>
+        <div className="flex flex-col items-center w-full mt-12 pr-36 ">
+          <BsMouse className="h-12 w-12 text-orange-600 animate-bounce -mb-2" />
+          <BiChevronsDown className="h-10 w-10 text-orange-600 animate-bounce" />
         </div>
       </div>
       {/*3D watch model */}
