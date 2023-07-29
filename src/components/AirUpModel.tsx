@@ -13,11 +13,9 @@ import {
   MeshBasicMaterial2,
   Color,
   GLTFAnimationPlugin,
-  timeout,
 } from "webgi"
 import gsap from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
-import Lenis from "@studio-freight/lenis"
 import { useCallback, useEffect, useRef, useState } from "react"
 import { ArrowLeftOnRectangleIcon } from "@heroicons/react/24/outline"
 
