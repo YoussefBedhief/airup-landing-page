@@ -22,7 +22,7 @@ import {
   Cog8ToothIcon,
   PauseIcon,
 } from "@heroicons/react/24/outline"
-import { PlayIcon, StopIcon } from "@heroicons/react/24/solid"
+import { StopIcon } from "@heroicons/react/24/solid"
 
 const AirUpModel = () => {
   const canvasRef = useRef(null)
