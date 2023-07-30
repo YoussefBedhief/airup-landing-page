@@ -260,17 +260,17 @@ const AirUpModel = () => {
       .getElementById("button--customize")
       ?.addEventListener("click", () => {
         gsap.to(position, {
-          x: -8.05,
-          y: -0.03,
-          z: 1.43,
+          x: isMobile ? -14.17 : -8.05,
+          y: isMobile ? 4.07 : -0.03,
+          z: isMobile ? 2.39 : 1.43,
           duration: 2,
           ease: "power3.inOut",
           onUpdate,
         })
         gsap.to(target, {
-          x: 0.74,
-          y: -0.22,
-          z: 0.03,
+          x: isMobile ? -0.05 : 0.74,
+          y: isMobile ? 0.21 : -0.22,
+          z: isMobile ? 1.41 : 0.03,
           duration: 2,
           ease: "power3.inOut",
           onUpdate,
@@ -407,7 +407,7 @@ const AirUpModel = () => {
     <>
       <div
         id="webgi-canvas-container"
-        className="w-screen h-screen scrollbar-hide fixed flex justify-end items-center flex-col"
+        className=" w-screen h-screen scrollbar-hide fixed flex justify-end items-center flex-col"
       >
         <canvas
           id="webgi-canvas"

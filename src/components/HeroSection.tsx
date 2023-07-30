@@ -4,17 +4,17 @@ import { BiChevronsDown } from "react-icons/bi"
 const HeroSection = () => {
   return (
     <section
-      className=" flex justify-between w-full h-screen scrollbar-hide scroll-smooth"
+      className="flex justify-end lg:justify-between w-full h-screen"
       id="first"
     >
       <div
-        className="flex flex-col justify-center pl-56"
+        className="flex flex-col justify-center pl-14 lg:pl-56"
         id="section--one--container"
       >
-        <p className="z-20 font-bold uppercase text-transparent text-lg bg-clip-text bg-gradient-to-b from-black via-orange-500 to-orange-600 py-3">
+        <p className="z-20 font-bold uppercase text-transparent text-lg bg-clip-text bg-gradient-to-b from-black via-orange-500 to-orange-600 lg:py-3">
           Air Up
         </p>
-        <h1 className="z-30 font-extrabold text-4xl py-2">
+        <h1 className="z-30 font-extrabold text-3xl lg:text-4xl p-2">
           New Bottle generation
         </h1>
         <p className="text-gray-500 text-xs z-30">
@@ -36,13 +36,13 @@ const HeroSection = () => {
             Buy
           </a>
         </div>
-        <div className="flex flex-col items-center w-full mt-12 pr-36 ">
-          <BsMouse className="h-12 w-12 text-orange-600 animate-bounce -mb-2" />
-          <BiChevronsDown className="h-10 w-10 text-orange-600 animate-bounce" />
+        <div className="flex flex-col items-center w-full mt-12 pr-16 ">
+          <BsMouse className=" h-8 w-8 lg:h-12 lg:w-12 text-orange-600 animate-bounce lg:-mb-2" />
+          <BiChevronsDown className="h-7 w-7 lg:h-10 lg:w-10 text-orange-600 animate-bounce" />
         </div>
       </div>
       {/*3D watch model */}
-      <div></div>
+      <div className="hidden lg:block"></div>
     </section>
   )
 }
