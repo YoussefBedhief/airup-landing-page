@@ -6,10 +6,10 @@ const Footer = () => {
       id="footer"
       className="bg-[#121117] p-4 w-full flex items-center justify-between"
     >
-      <div className="flex items-center justify-between w-56">
+      <div className="flex items-center justify-between w-56 z-40">
         <img src={Logo} alt="Logo image" className="p-2" />
       </div>
-      <div className="flex items-center justify-between w-1/4">
+      <div className="flex items-center justify-between w-1/4 z-40">
         <p className=" p-2 text-left w-64">
           <a
             className="text-orange-600 cursor-pointer"
@@ -36,7 +36,7 @@ const Footer = () => {
           </a>
         </p>
       </div>
-      <div className="flex items-center justify-between w-1/4">
+      <div className="flex items-center justify-between w-1/4 z-40">
         <p className="p-2 text-center w-56">
           3D model of the water bottle of the brand
           <a
@@ -50,7 +50,7 @@ const Footer = () => {
           .
         </p>
       </div>
-      <div className="flex items-center justify-between w-1/4">
+      <div className="flex items-center justify-between w-1/4 z-40">
         <p className="w-56">
           &copy; {new Date().getFullYear()}
           <a
