@@ -252,6 +252,7 @@ const AirUpModel = () => {
     const firstsections = document.getElementById("first") as HTMLDivElement
     const secondSection = document.getElementById("second") as HTMLDivElement
     const thirdSection = document.getElementById("third") as HTMLDivElement
+    const footer = document.getElementById("footer") as HTMLDivElement
     const mainContainer = document.getElementById(
       "webgi-canvas-container"
     ) as HTMLDivElement
@@ -278,6 +279,7 @@ const AirUpModel = () => {
         firstsections.style.display = "none"
         secondSection.style.display = "none"
         thirdSection.style.display = "none"
+        footer.style.display = "none"
         mainContainer.style.pointerEvents = "all"
         document.body.style.cursor = "grab"
       })
@@ -313,6 +315,7 @@ const AirUpModel = () => {
       firstsections.style.display = "flex"
       secondSection.style.display = "flex"
       thirdSection.style.display = "flex"
+      footer.style.display = "flex"
       mainContainer.style.pointerEvents = "none"
       document.body.style.cursor = "default"
       exitButton.style.display = "none"

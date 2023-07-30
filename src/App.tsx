@@ -1,6 +1,7 @@
 import AboutSection from "./components/AboutSection"
 import AirUpModel from "./components/AirUpModel"
 import DisplaySection from "./components/DisplaySection"
+import Footer from "./components/Footer"
 import HeroSection from "./components/HeroSection"
 import Navbar from "./components/Navbar"
 
@@ -11,6 +12,7 @@ function App() {
       <HeroSection />
       <AboutSection />
       <DisplaySection />
+      <Footer />
       <AirUpModel />
     </main>
   )
