@@ -14,6 +14,7 @@ const Footer = () => {
           <a
             className="text-orange-600 cursor-pointer"
             href="https://skfb.ly/oJD8U"
+            target="_blank"
           >
             Air Up pro bottle - Industrial design{" "}
           </a>
@@ -21,6 +22,7 @@ const Footer = () => {
           <a
             className="text-orange-600 cursor-pointer"
             href="https://sketchfab.com/nixo_design"
+            target="_blank"
           >
             NIXO{" "}
           </a>
@@ -28,6 +30,7 @@ const Footer = () => {
           <a
             className="text-orange-600 cursor-pointer"
             href="http://creativecommons.org/licenses/by/4.0/"
+            target="_blank"
           >
             Creative Commons Attributionx.{" "}
           </a>
@@ -38,6 +41,7 @@ const Footer = () => {
           3D model of the water bottle of the brand
           <a
             href="https://fr.air-up.com/collections/bottles"
+            target="_blank"
             className="text-orange-600 cursor-pointer"
           >
             {" "}
@@ -49,7 +53,11 @@ const Footer = () => {
       <div className="flex items-center justify-between w-1/4">
         <p className="w-56">
           &copy; {new Date().getFullYear()}
-          <a href="" className="text-orange-600 cursor-pointer">
+          <a
+            href="#"
+            target="_blank"
+            className="text-orange-600 cursor-pointer"
+          >
             {" "}
             YB{" "}
           </a>
