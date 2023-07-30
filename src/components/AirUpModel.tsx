@@ -142,8 +142,8 @@ const AirUpModel = () => {
     viewer.scene.activeCamera.setCameraOptions({ controlsEnabled: false })
 
     if (isMobile) {
-      position.set(-3.5, -1.1, 5.5)
-      target.set(-0.8, 1.55, -0.7)
+      position.set(-4.35, 2.05, 6.86)
+      target.set(0.84, -0.39, -0.22)
       camera.setCameraOptions({ fov: 40 })
     }
 
@@ -157,9 +157,9 @@ const AirUpModel = () => {
       // FIRST SECTION
 
       tl.to(position, {
-        x: isMobile ? -6.0 : 1.56,
-        y: isMobile ? 5.5 : -2.26,
-        z: isMobile ? -3.3 : -4.95,
+        x: isMobile ? -4.35 : 1.56,
+        y: isMobile ? 2.05 : -2.26,
+        z: isMobile ? 6.86 : -4.95,
         scrollTrigger: {
           trigger: "#second",
           start: "top bottom",
@@ -182,9 +182,9 @@ const AirUpModel = () => {
           },
         })
         .to(target, {
-          x: isMobile ? -1.1 : -1.2,
-          y: isMobile ? 1.0 : 0.03,
-          z: isMobile ? -0.1 : -0.37,
+          x: isMobile ? 0.84 : -1.2,
+          y: isMobile ? -0.39 : 0.03,
+          z: isMobile ? -0.22 : -0.37,
           scrollTrigger: {
             trigger: "#second",
             start: "top bottom",
@@ -407,12 +407,12 @@ const AirUpModel = () => {
     <>
       <div
         id="webgi-canvas-container"
-        className=" w-screen h-screen scrollbar-hide fixed flex justify-end items-center flex-col"
+        className=" w-screen h-screen fixed flex justify-end items-center flex-col"
       >
         <canvas
           id="webgi-canvas"
           ref={canvasRef}
-          className="h-full w-full scrollbar-hide bg-transparent fixed top-0"
+          className="h-full w-full bg-transparent fixed top-0"
         />
 
         <button
