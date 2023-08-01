@@ -16,7 +16,7 @@ const DisplaySection = () => {
         <h1 className="text-center font-semibold lg:font-extrabold text-3xl z-30 lg:text-5xl py-2">
           Unleash Flavorful Hydration with AirUp.
         </h1>
-        <p className="text-gray-500 text-xs text-center px-4">
+        <p className="text-gray-500 text-xs text-center px-4 py-2">
           Customize Your Hydration Experience: With AirUp, youre in control. Mix
           and match a variety of tantalizing flavor pods to create your perfect
           hydration companion. Unleash your creativity and savor the journey of

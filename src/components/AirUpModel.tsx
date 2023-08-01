@@ -157,9 +157,9 @@ const AirUpModel = () => {
       // FIRST SECTION
 
       tl.to(position, {
-        x: isMobile ? -4.35 : 1.56,
-        y: isMobile ? 2.05 : -2.26,
-        z: isMobile ? 6.86 : -4.95,
+        x: isMobile ? 8 : 1.56,
+        y: isMobile ? 1.04 : -2.26,
+        z: isMobile ? -6.83 : -4.95,
         scrollTrigger: {
           trigger: "#second",
           start: "top bottom",
@@ -182,9 +182,9 @@ const AirUpModel = () => {
           },
         })
         .to(target, {
-          x: isMobile ? 0.84 : -1.2,
-          y: isMobile ? -0.39 : 0.03,
-          z: isMobile ? -0.22 : -0.37,
+          x: isMobile ? 0.4 : -1.2,
+          y: isMobile ? 0.02 : 0.03,
+          z: isMobile ? -0.18 : -0.37,
           scrollTrigger: {
             trigger: "#second",
             start: "top bottom",
@@ -208,9 +208,9 @@ const AirUpModel = () => {
         // LAST SECTION
 
         .to(position, {
-          x: -3.4,
-          y: 9.6,
-          z: 1.71,
+          x: isMobile ? -2.59 : -3.4,
+          y: isMobile ? 13.46 : 9.6,
+          z: isMobile ? 1.49 : 1.71,
           scrollTrigger: {
             trigger: "#third",
             start: "top bottom",
@@ -222,9 +222,9 @@ const AirUpModel = () => {
         })
 
         .to(target, {
-          x: -1.5,
-          y: 2.13,
-          z: -0.4,
+          x: isMobile ? 0.6 : -1.5,
+          y: isMobile ? 0.02 : 2.13,
+          z: isMobile ? 0.83 : -0.4,
           scrollTrigger: {
             trigger: "#third",
             start: "top bottom",
